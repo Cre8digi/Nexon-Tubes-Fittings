@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import { useState, useEffect } from "react";
 
 const slides = [
   {
@@ -24,14 +24,16 @@ const slides = [
 ];
 
 const stats = [
-  { label: "Years Experience", value: "6+" },
-  { label: "Happy Clients", value: "1340+" },
-  { label: "Cities Served", value: "27+" },
+  { label: "Years Experience", value: 6 },
+  { label: "Happy Clients", value: 1340 },
+  { label: "Cities Served", value: 27 },
 ];
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [animatedStats, setAnimatedStats] = useState(stats.map(() => 0));
 
+  // Slide auto-changer
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -39,14 +41,52 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
+  // Animate stats on scroll
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animate-counter");
+    const animated = new Set();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const index = Array.from(elements).indexOf(entry.target);
+        if (entry.isIntersecting && !animated.has(index)) {
+          animated.add(index);
+          let start = 0;
+          const end = stats[index].value;
+          const step = end > 1000 ? 25 : end > 100 ? 10 : 1;
+          const duration = 500;
+          const stepTime = Math.max(Math.floor(duration / (end / step)), 20);
+
+          const counter = setInterval(() => {
+            start += step;
+            if (start >= end) {
+              start = end;
+              clearInterval(counter);
+            }
+            setAnimatedStats((prev) => {
+              const updated = [...prev];
+              updated[index] = start;
+              return updated;
+            });
+          }, stepTime);
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const { image, title, highlight, description } = slides[currentSlide];
 
   return (
     <section id="home" className="relative min-h-[calc(100vh+150px)] flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: 'url(${image})' }}
       >
         <div className="absolute inset-0 bg-slate-900/80" />
       </div>
@@ -82,10 +122,10 @@ export default function HeroSection() {
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {stats.map((stat) => (
-              <div key={stat.label}>
+            {stats.map((stat, index) => (
+              <div key={stat.label} className="animate-counter">
                 <div className="text-3xl md:text-4xl font-bold text-orange-500 mb-2">
-                  {stat.value}
+                  {animatedStats[index]}+
                 </div>
                 <div className="text-slate-300">{stat.label}</div>
               </div>
@@ -96,4 +136,3 @@ export default function HeroSection() {
     </section>
   );
 }
- 
