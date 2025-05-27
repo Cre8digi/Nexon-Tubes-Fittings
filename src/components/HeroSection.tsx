@@ -29,10 +29,15 @@ const stats = [
   { label: "Cities Served", value: 27 },
 ];
 
+
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animatedStats, setAnimatedStats] = useState(stats.map(() => 0));
-
+  
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+  
   // Slide auto-changer
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,44 +45,48 @@ export default function HeroSection() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
+  
   // Animate stats on scroll
   useEffect(() => {
     const elements = document.querySelectorAll(".animate-counter");
     const animated = new Set();
-
+  
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const index = Array.from(elements).indexOf(entry.target);
         if (entry.isIntersecting && !animated.has(index)) {
           animated.add(index);
-          let start = 0;
-          const end = stats[index].value;
-          const step = end > 1000 ? 25 : end > 100 ? 10 : 1;
-          const duration = 500;
-          const stepTime = Math.max(Math.floor(duration / (end / step)), 20);
-
-          const counter = setInterval(() => {
-            start += step;
-            if (start >= end) {
-              start = end;
-              clearInterval(counter);
-            }
+  
+          const endValue = stats[index].value;
+          const duration = 1000; // 1 second
+          const startTime = performance.now();
+  
+          const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutCubic(progress);
+            const currentValue = Math.floor(easedProgress * endValue);
+  
             setAnimatedStats((prev) => {
               const updated = [...prev];
-              updated[index] = start;
+              updated[index] = currentValue;
               return updated;
             });
-          }, stepTime);
-
+  
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            }
+          };
+  
+          requestAnimationFrame(animate);
           observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.2 });
-
+  
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, []);  
 
   const { image, title, highlight, description } = slides[currentSlide];
 
@@ -89,7 +98,7 @@ export default function HeroSection() {
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="absolute inset-0 bg-slate-900/80" />
-      </div>
+      </div>  
 
       {/* Content */}
       <div className="relative z-10 top-5 max-w-[2000px] mx-auto px-5 md:px-5 lg:px-6 text-center">

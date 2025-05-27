@@ -1,5 +1,3 @@
-// next.config.mjs
-
 const securityHeaders = [
   {
     key: "X-Content-Type-Options",
@@ -19,9 +17,11 @@ const securityHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: "default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline'",
+    value:
+      "default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:;",
   },
 ];
+
 
 const nextConfig = {
   reactStrictMode: true,
