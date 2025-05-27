@@ -76,7 +76,7 @@ Open http://localhost:3000 to see the app.
 🔗 Useful Links
 
 🌐 Live Website
-📞 WhatsApp Quote
+📞 WhatsApp Quote 
 🚀 Vercel Dashboard
 💻 Cre8digi - Agency Website
 
@@ -88,4 +88,4 @@ This repository and its contents are intellectual property of Nexon Tube & Fitti
 Unauthorized commercial use or distribution is prohibited.
 
 For business inquiries or collaboration, please contact:
-📧 support@cre8digi.com
+📧 cre8digi.suppor@gmail.com
