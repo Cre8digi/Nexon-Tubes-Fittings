@@ -8,37 +8,37 @@ export default function IndustriesSection() {
       icon: Building2,
       title: "Real Estate",
       description: "Residential and commercial property development projects",
-      projects: "25+ Projects"
+      
     },
     {
       icon: Palette,
       title: "Interior Design",
       description: "Custom steel elements for modern interior spaces",
-      projects: "40+ Installations"
+     
     },
     {
       icon: HardHat,
       title: "Construction",
       description: "Structural steel components for construction industry",
-      projects: "60+ Constructions"
+      
     },
     {
       icon: Landmark,
       title: "Public Infrastructure",
       description: "Government and municipal infrastructure projects",
-      projects: "15+ Contracts"
+      
     },
     {
       icon: Sofa,
       title: "Furniture Manufacturing",
       description: "Steel components for furniture and fixture manufacturers",
-      projects: "80+ Designs"
+      
     },
     {
       icon: Plane,
       title: "Transportation",
       description: "Metal industry aids transport with strong, durable materials.",
-      projects: "10+ Partners"
+     
     },
   ]
 

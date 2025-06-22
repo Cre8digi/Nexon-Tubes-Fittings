@@ -8,7 +8,7 @@ Welcome to the official website repository for **Nexon Tube & Fitting**, a trust
 
 ## 🚀 Live Website
 
-👉 [https://nexontube.com](https://nexontube.com)
+👉 [https://nexonfitting.com](https://nexonfitting.com)
 
 ---
 
@@ -53,7 +53,7 @@ Welcome to the official website repository for **Nexon Tube & Fitting**, a trust
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/nexon-tube.git
+   git clone https://github.com/Cre8digi/nexon-tube-fitting.git
    cd nexon-tube
 
 
