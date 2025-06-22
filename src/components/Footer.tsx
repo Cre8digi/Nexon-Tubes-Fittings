@@ -14,13 +14,6 @@ import {
 export default function Footer() {
   return (
     <footer id="contact" className="bg-slate-900 text-white">
-      {/* <div className="bg-slate-800 py-4">
-        <div className="max-w-[2000px] mx-auto px-4 md:px-6 lg:px-8">
-          <div className="w-full h-64 bg-slate-700 rounded-lg overflow-hidden">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3645.6245925041417!2d72.82455617520239!3d18.95931088222135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDU3JzMzLjUiTiA3MsKwNDknMzcuNyJF!5e1!3m2!1sen!2snl!4v1748244674579!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div> */}
       <div className="max-w-[2000px] mx-auto px-4 md:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-6">

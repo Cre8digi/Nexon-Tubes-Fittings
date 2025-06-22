@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Building2, Palette, HardHat, Landmark, Sofa, Plane } from "lucide-react"
@@ -9,37 +8,37 @@ export default function IndustriesSection() {
       icon: Building2,
       title: "Real Estate",
       description: "Residential and commercial property development projects",
-      
+      projects: "25+ Projects"
     },
     {
       icon: Palette,
       title: "Interior Design",
       description: "Custom steel elements for modern interior spaces",
-      
+      projects: "40+ Installations"
     },
     {
       icon: HardHat,
       title: "Construction",
       description: "Structural steel components for construction industry",
-     
+      projects: "60+ Constructions"
     },
     {
       icon: Landmark,
       title: "Public Infrastructure",
       description: "Government and municipal infrastructure projects",
-     
+      projects: "15+ Contracts"
     },
     {
       icon: Sofa,
       title: "Furniture Manufacturing",
       description: "Steel components for furniture and fixture manufacturers",
-      
+      projects: "80+ Designs"
     },
     {
       icon: Plane,
       title: "Transportation",
       description: "Metal industry aids transport with strong, durable materials.",
-      
+      projects: "10+ Partners"
     },
   ]
 
@@ -65,7 +64,12 @@ export default function IndustriesSection() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{industry.title}</h3>
                 <p className="text-slate-600 mb-4">{industry.description}</p>
-                <div className="text-sm font-semibold text-orange-500">{industry.projects}</div>
+                
+                {industry.projects && (
+                  <div className="text-sm font-semibold text-orange-500">
+                    {industry.projects}
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
