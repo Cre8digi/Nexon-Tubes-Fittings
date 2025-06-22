@@ -5,8 +5,8 @@ import { Award, Users, Factory, Shield } from "lucide-react";
 export default function AboutSection() {
   const achievements = [
     { icon: Award, label: "ISO Certified", value: "9001:2019" },
-    { icon: Users, label: "Happy Clients", value: "1340+" },
-    { icon: Factory, label: "Production Capacity", value: "50T/Month" },
+    { icon: Users, label: "Happy Clients", value: "720+" },
+    { icon: Factory, label: "Production Capacity", value: "20T/Month" },
     { icon: Shield, label: "Quality Assurance", value: "100%" },
   ];
 
@@ -34,11 +34,11 @@ export default function AboutSection() {
             <div>
              
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                10+ Years of Excellence in
+                6+ Years of Excellence in
                 <span className="text-orange-500"> Tube Manufacturing</span>
               </h2>
               <p className="text-lg text-slate-700 mb-6">
-                Since 2013, Nexon Tube & Fitting has been at the forefront of
+                Since 2019, Nexon Tube & Fitting has been at the forefront of
                 manufacturing premium quality stainless steel tubes, pipes, and
                 fittings. Our commitment to excellence and innovation has made
                 us a trusted partner for architects, contractors, and businesses
@@ -91,7 +91,7 @@ export default function AboutSection() {
                   className="w-full h-32 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
                 />
                 <img
-                  src="https://pacificpipefittings.com/images/pacific-pipe-fittings/pipe-fitting/dairy-fitting-manufacturer.jpg"
+                  src="https://5.imimg.com/data5/FM/QK/KT/SELLER-30880166/stainless-steel-310s-buttweld-fittings-500x500.jpg"
                   alt="Team at work"
                   className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
                 />

@@ -15,9 +15,9 @@ export default function WhyChooseNexon() {
     },
     {
       icon: Users,
-      title: "1340+ Happy Clients",
+      title: "7200+ Happy Clients",
       description: "Trusted by thousands of satisfied customers across India",
-      stat: "1340",
+      stat: "720",
       suffix: "+",
       isCounter: true,
     },

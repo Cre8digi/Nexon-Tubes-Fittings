@@ -141,7 +141,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Connect With Us</h3>
+            {/* <h3 className="text-lg font-bold mb-6">Connect With Us</h3>
             <div className="flex space-x-4 mb-6">
               <a
                 href="#"
@@ -167,7 +167,7 @@ export default function Footer() {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
 
             <a
               href="https://drive.google.com/file/d/1DRmG6i4x-f14tUFUbMQrX6OdQsisw1lS/view?usp=sharing"

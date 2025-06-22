@@ -25,7 +25,7 @@ const slides = [
 
 const stats = [
   { label: "Years Experience", value: 6 },
-  { label: "Happy Clients", value: 1340 },
+  { label: "Happy Clients", value: 720 },
   { label: "Cities Served", value: 27 },
 ];
 

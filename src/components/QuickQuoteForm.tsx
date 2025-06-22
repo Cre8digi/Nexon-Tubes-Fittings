@@ -88,13 +88,13 @@ export default function QuickQuoteForm() {
                         Select product type
                       </option>
                       <option value="Stainless Steel Tubes">
-                        Stainless Steel Tubes
+                        Stainless Steel Elbow
                       </option>
-                      <option value="Industrial Pipes">Industrial Pipes</option>
-                      <option value="Railing Fittings">Railing Fittings</option>
-                      <option value="Steel Coils">Steel Coils</option>
-                      <option value="Benches & Furniture">Benches & Furniture</option>
-                      <option value="Grills & Gates">Grills & Gates</option>
+                      <option value="Industrial Pipes">Stainless Steel Sheets</option>
+                      <option value="Railing Fittings">Stainless Steel Long Stubend</option>
+                      <option value="Steel Coils">Stainless Steel Cap</option>
+                      <option value="Benches & Furniture">Stainless Steel Flanges </option>
+                      <option value="Grills & Gates">Dairy Fitting</option>
                     </select>
                   </div>
 

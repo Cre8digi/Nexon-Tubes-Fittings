@@ -137,7 +137,7 @@ export default function Home() {
           <ApplicationsSection />
           <IndustriesSection />
           <TestimonialsSection />
-          <BlogSection />
+        
           <QuickQuoteForm />
           <FooterCTA />
         </main>

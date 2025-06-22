@@ -22,7 +22,7 @@ export default function ProductsGallery() {
     },
     {
       name: "Stainless Steel Fasteners",
-      image: "https://krystalsteels.in/wp-content/uploads/2023/05/SS-Fasteners.jpg",
+      image: "https://ritinoxoverseas.com/blog/wp-content/uploads/2021/09/Fasteners.jpg",
       description: "High-strength, rust-proof fasteners for reliable and long-lasting assemblies."
     },
     {
@@ -103,10 +103,11 @@ export default function ProductsGallery() {
                 </div>
               </div>
               <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-600">Learn More</span>
-                  <ArrowRight className="w-5 h-5 text-orange-500 group-hover:translate-x-2 transition-transform duration-300" />
+              <a a href="https://wa.me/918779165356">  <div className="flex items-center justify-between">
+                  <span className="text-slate-600">Whatsapp</span>
+                  <ArrowRight   className="w-5 h-5 text-orange-500 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
+                </a>
               </CardContent>
             </Card>
           ))}
