@@ -103,7 +103,7 @@ export default function ProductsGallery() {
                 </div>
               </div>
               <CardContent className="p-6">
-              <a a href="https://wa.me/918779165356">  <div className="flex items-center justify-between">
+              <a  href="https://wa.me/918779165356">  <div className="flex items-center justify-between">
                   <span className="text-slate-600">Whatsapp</span>
                   <ArrowRight   className="w-5 h-5 text-orange-500 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
