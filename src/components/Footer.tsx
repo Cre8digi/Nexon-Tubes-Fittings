@@ -98,14 +98,14 @@ export default function Footer() {
                   Industries
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="/blog"
                   className="text-slate-300 hover:text-orange-500 transition-colors duration-300"
                 >
                   Blog
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

@@ -69,11 +69,11 @@ export default function IndustriesSection() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{industry.title}</h3>
                 <p className="text-slate-600 mb-4">{industry.description}</p>
-                {industry.projects && (
+                {/* {industry.projects && (
                   <div className="text-sm font-semibold text-orange-500">
                     {industry.projects}
                   </div>
-                )}
+                )} */}
               </CardContent>
             </Card>
           ))}
