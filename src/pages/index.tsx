@@ -67,6 +67,9 @@ export default function Home() {
           name="description"
           content="Nexon Tube & Fitting is a trusted manufacturer of stainless steel tubes, pipes, plates, and industrial fittings. Serving chemical, construction, and dairy industries for over a decade."
         />
+       
+  <link rel="icon" href="/ntf.png" type="image/png" />
+  <link rel="canonical" href="https://nexontube.com/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
