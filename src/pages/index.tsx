@@ -9,7 +9,6 @@ import WhyChooseNexon from "@/components/WhyChooseNexon";
 import ApplicationsSection from "@/components/ApplicationSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import TestimonialsSection from "@/components/TestimonialSection";
-import BlogSection from "@/components/BlogSection";
 import FooterCTA from "@/components/FooterCTA";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -137,7 +136,6 @@ export default function Home() {
           <ApplicationsSection />
           <IndustriesSection />
           <TestimonialsSection />
-          <BlogSection />
           <QuickQuoteForm />
           <FooterCTA />
         </main>
