@@ -27,7 +27,7 @@ export default function ApplicationsSection() {
    
       title: "Infrastructure",
       description: "Public infrastructure, bridges, and industrial applications",
-      image: "https://powerhouseegypt.com/wp-content/uploads/2022/08/%D8%AA.jpg"
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmacrostainless.ie%2F2025%2F02%2F02%2Fchoosing-the-right-stainless-steel-grade-for-your-industry%2F&psig=AOvVaw3Qv7p8ZoDfLK_mZOo_GayC&ust=1754843337433000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPDC1IWT_o4DFQAAAAAdAAAAABAL"
     }
   ]
 
